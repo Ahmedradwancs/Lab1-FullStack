@@ -4,42 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1 class="title">Recipes</h1>
+
+<table id="recipeTable" class="recipe-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Ingredients</th>
+            <th>Instructions</th>
+            <th>Cooking Time</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+
+<h2 class="section-title">Add New Recipe</h2>
+
+<form id="addRecipeForm" class="recipe-form">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" class="input-field" required>
+    </div>
+
+    <div class="form-group">
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" name="ingredients" class="input-field" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="instructions">Instructions:</label>
+        <textarea id="instructions" name="instructions" class="input-field" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="cookingTime">Cooking Time:</label>
+        <input type="text" id="cookingTime" name="cookingTime" class="input-field" required>
+    </div>
+
+    <button type="submit" class="btn">Add Recipe</button>
+</form>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
     <style>
         body {
             margin: 20px;
             font-family: Arial, sans-serif;
         }
+        
         h1 {
             margin-bottom: 20px;
         }
+        
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
+        
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 10px;
             text-align: left;
         }
+        
         th {
             background-color: #007bff;
             color: white;
         }
+        
         input[type="text"],
         textarea {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             box-sizing: border-box;
             margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
+        
         button {
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 4px;
         }
+        
         button:hover {
             background-color: #0056b3;
         }
@@ -93,4 +161,4 @@
 <script src="scripts.js"></script>
 
 </body>
-</html>
+</html> -->

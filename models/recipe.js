@@ -25,7 +25,7 @@ const recipeSchema = new mongoose.Schema({
     ingredients: [String],
     instructions: String,
     cookingTime: String
-}, { collection: 'recipes' }); // Specify the collection name
+}, { collection: 'Recipes' }); // Specify the collection name
 
 // Create a model based on the schema
 const Recipe = mongoose.model('Recipe', recipeSchema);
