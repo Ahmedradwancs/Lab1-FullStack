@@ -1,11 +1,7 @@
 
-# Report: Building a Recipe Management System
+# Report on Lab1 - Fullstack - Recipes Management System
 
----
 
-## Introduction
-
-In today's digital age, managing recipes efficiently has become increasingly important, whether for personal use or in a professional kitchen setting. With the rise of web development technologies, creating a Recipe Management System (RMS) presents both opportunities and challenges. This report explores the process of building an RMS, addressing the challenges encountered, my solutions to those challenges, and reflections on alternative approaches.
 
 ---
 
