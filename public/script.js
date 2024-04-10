@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(function(data) {
-            var tableBody = document.querySelector('#recipeTable tbody');
+            let tableBody = document.querySelector('#recipeTable tbody');
             data.forEach(recipe => {
-                var row = `
+                let row = `
                     <tr data-id="${recipe._id}">
                         <td>${recipe.title}</td>
                         <td>${recipe.ingredients.join(', ')}</td>
@@ -25,39 +25,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function editRecipe(id) {
     // Find the table row corresponding to the recipe ID
-    var row = document.querySelector(`#recipeTable tbody tr[data-id="${id}"]`);
+    let row = document.querySelector(`#recipeTable tbody tr[data-id="${id}"]`);
 
     // Get the table cells within the row
-    var cells = row.querySelectorAll('td');
+    let cells = row.querySelectorAll('td');
 
     // Loop through the cells to make them editable
     cells.forEach(cell => {
         // Create an input element
-        var input = document.createElement('input');
+        let input = document.createElement('textarea');
         input.value = cell.textContent.trim(); // Set input value to current cell content
         cell.textContent = ''; // Clear the cell content
         cell.appendChild(input); // Append the input element to the cell
     });
 
     // Create a Save button
-    var saveButton = document.createElement('button');
+    let saveButton = document.createElement('button');
     saveButton.innerText = 'Save';
     saveButton.setAttribute('onclick', `saveRecipe('${id}')`);
     row.querySelector('td:last-child').appendChild(saveButton); // Append the Save button to the last cell
 
-    // Change the Edit button text to "Cancel"
-    var editButton = row.querySelector('button:nth-last-child(2)');
-    editButton.innerText = 'Cancel';
-    editButton.setAttribute('onclick', `cancelEdit('${id}')`);
+    // Create a Cancel button
+    let cancelButton = document.createElement('button');
+    cancelButton.innerText = 'Cancel';
+    cancelButton.setAttribute('onclick', `cancelEdit('${id}')`);
+    row.querySelector('td:last-child').appendChild(cancelButton); // Append the Cancel button to the last cell
+
+    // Hide the Edit button
+    let editButton = row.querySelector('button:nth-last-child(3)');
+    editButton.style.display = 'none';
+}
+
+function cancelEdit(id) {
+    // Reload the page to cancel the edit and revert changes
+    location.reload();
 }
 
 function saveRecipe(id) {
     // Retrieve the table row corresponding to the recipe ID
-    var row = document.querySelector(`#recipeTable tbody tr[data-id="${id}"]`);
+    let row = document.querySelector(`#recipeTable tbody tr[data-id="${id}"]`);
 
     // Retrieve the input values from the row
-    var inputs = row.querySelectorAll('input');
-    var updatedRecipe = {
+    let inputs = row.querySelectorAll('input');
+    let updatedRecipe = {
         title: inputs[0].value,
         ingredients: inputs[1].value.split(',').map(ingredient => ingredient.trim()),
         instructions: inputs[2].value,
@@ -83,10 +93,6 @@ function saveRecipe(id) {
     .catch(error => console.error('Error updating recipe:', error));
 }
 
-function cancelEdit(id) {
-    // Reload the page to cancel the edit and revert changes
-    location.reload();
-}
 
 function deleteRecipe(id) {
     // Confirm deletion

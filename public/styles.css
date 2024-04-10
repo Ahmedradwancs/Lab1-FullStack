@@ -3,31 +3,36 @@
 body {
     margin: 20px;
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
 }
 
 .title {
     margin-bottom: 20px;
+    color: #333; /* Dark text color */
 }
 
 .recipe-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
 .recipe-table th, .recipe-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #efd8d8;
     padding: 12px;
     text-align: left;
 }
 
 .recipe-table th {
-    background-color: #f5f5dc; 
-    color: #333; 
+    background-color: #696d74e0; 
+    color: white;
 }
 
 .input-field {
-    width: 100%;
+    width: calc(100% - 24px); /* Adjust width to leave space for padding */
     padding: 12px;
     box-sizing: border-box;
     margin-bottom: 10px;
@@ -37,7 +42,7 @@ body {
 
 .btn {
     padding: 12px 24px;
-    background-color: #6c757d; 
+    background-color: #28a745; /* Green button */
     color: white;
     border: none;
     cursor: pointer;
@@ -45,5 +50,26 @@ body {
 }
 
 .btn:hover {
-    background-color: #5a6268; 
+    background-color: #218838; /* Darker green on hover */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: #333; /* Dark text color */
+}
+
+.recipe-form {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.recipe-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333; /* Dark text color */
 }
