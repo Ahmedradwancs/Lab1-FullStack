@@ -25,7 +25,7 @@ In today's digital age, managing recipes efficiently has become increasingly imp
 
 2. **Dynamic Table Updates:** By leveraging JavaScript's DOM manipulation capabilities, I dynamically updated the table contents upon successful CRUD operations. This provided users with instant feedback and eliminated the need for manual page refreshes.
 
-3. **User Input Handling:** Implementing client-side input validation using HTML form validation attributes and JavaScript functions ensured that only valid data was submitted to the server. Additionally, on the server-side.
+3. **User Input Handling:** Implementing client-side input validation using HTML form validation attributes and JavaScript functions ensured that only valid data was submitted to the server.
 
 ---
 
