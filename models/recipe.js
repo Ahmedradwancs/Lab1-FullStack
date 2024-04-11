@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Load environment variables
-const { PORT, CONNECTION_URL } = process.env;
+const { CONNECTION_URL } = process.env;
 
 // MongoDB Connection URI
 const uri = CONNECTION_URL;

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td>${recipe.title}</td>
                         <td>${recipe.ingredients.join(', ')}</td>
                         <td>${recipe.instructions}</td>
-                        <td>${recipe.cookingTime} minutes</td>
+                        <td>${recipe.cookingTime} </td>
                         <td>
                             <button onclick="editRecipe('${recipe._id}')">Edit</button>
                             <button onclick="deleteRecipe('${recipe._id}')">Delete</button>
@@ -66,7 +66,7 @@ function saveRecipe(id) {
     let row = document.querySelector(`#recipeTable tbody tr[data-id="${id}"]`);
 
     // Retrieve the input values from the row
-    let inputs = row.querySelectorAll('input');
+    let inputs = row.querySelectorAll('textarea'); // Change 'input' to 'textarea'
     let updatedRecipe = {
         title: inputs[0].value,
         ingredients: inputs[1].value.split(',').map(ingredient => ingredient.trim()),
@@ -92,6 +92,7 @@ function saveRecipe(id) {
     })
     .catch(error => console.error('Error updating recipe:', error));
 }
+
 
 
 function deleteRecipe(id) {

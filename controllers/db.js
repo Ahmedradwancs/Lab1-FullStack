@@ -1,11 +1,9 @@
 import dotenv from 'dotenv';
-import Recipe from './models/recipe.js';
+import Recipe from '../models/recipe.js';
 
 
 dotenv.config();
 
-// Load environment variables
-const { CONNECTION_URL } = process.env;
 
 // Insert a new recipe
 export const insertRecipe = async (recipe) => {

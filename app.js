@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './models/recipe.js'; // Import the connectDB function
-import { getRecipes, getRecipeByTitle, insertRecipe, updateRecipe, deleteRecipe } from './db.js'; // Import the database functions
+import { getRecipes, getRecipeByTitle, insertRecipe, updateRecipe, deleteRecipe } from './controllers/db.js'; // Import the database functions
 
 dotenv.config();
 
