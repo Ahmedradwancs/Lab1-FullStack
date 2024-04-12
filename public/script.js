@@ -141,7 +141,7 @@ function addRecipe() {
     .then(response => {
         if (response.ok) {
             // Refresh table to display newly added recipe
-            fetchRecipes();
+            // fetchRecipes(); 
             // Clear form fields
             document.getElementById('addRecipeForm').reset();
         } else {

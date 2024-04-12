@@ -6,7 +6,8 @@
   "main": "app.js",
 
   "scripts": {
-    "start": "nodemon -L app.js"
+    "start": "node app.js",
+    "dev": "nodemon -L app.js"
   },
   "keywords": [],
   "author": "",
